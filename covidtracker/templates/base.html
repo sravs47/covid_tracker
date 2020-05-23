@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}" />
+    <title>Covid Tracker</title>
+</head>
+<body>
+{% include "navbar.html" %}
+
+{% block content %}
+Covid Tracker Data
+{% endblock %}
+
+
+</body>
+</html>

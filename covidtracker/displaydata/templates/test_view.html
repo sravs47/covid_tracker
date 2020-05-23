@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for country in all_country_data %}
+<H1>Country</H1>
+<p>Country : {{country.country}}</p>
+<p>Country Code : {{country.country_code}}</p>
+<p>slug : {{country.slug}}</p>
+<p>new_confirmed : {{country.new_confirmed}}</p>
+<p>total_confirmed : {{country.total_confirmed}}</p>
+<p>new_deaths : {{country.new_deaths}}</p>
+<p>total_deaths : {{country.total_deaths}}</p>
+<p>new_recovered : {{country.new_recovered}}</p>
+<p>total_recovered : {{country.total_recovered}}</p>
+
+{% endfor %}
+
+{% endblock %}

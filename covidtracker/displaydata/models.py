@@ -1,5 +1,6 @@
 from django.db import models
-
+# from datetime import datetime
+from django.utils.timezone import now
 
 
 class Summary(models.Model):
@@ -13,9 +14,11 @@ class Summary(models.Model):
     new_recovered = models.IntegerField()
     total_recovered = models.IntegerField()
     date = models.DateTimeField()
+    insert_time = models.DateTimeField(default=now())
 
 
 class WorldTotal(models.Model):
     total_confirmed = models.IntegerField()
     total_deaths = models.IntegerField()
     total_recovered = models.IntegerField()
+    insert_time = models.DateTimeField(default=now())
